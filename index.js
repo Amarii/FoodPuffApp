@@ -1,7 +1,6 @@
 const classifier = knnClassifier.create();
 const webcamElement = document.getElementById('webcam');
 
-
 let net;
 
 async function app() {
@@ -55,7 +54,6 @@ async function app() {
         // Dispose the tensor to release the memory.
         img.dispose();
       }
-  
       await tf.nextFrame();
     }
   }
