@@ -12,6 +12,7 @@
     const URL = "https://teachablemachine.withgoogle.com/models/wcWYT42HY/";
 
     let model, webcam, labelContainer, maxPredictions;
+    let index = 0;
 
     // Load the image model and setup the webcam
     async function init() {
@@ -38,6 +39,8 @@
         for (let i = 0; i < maxPredictions; i++) { // and class labels
             labelContainer.appendChild(document.createElement("div"));
         }
+        let oldmsg = '';
+        let index;
     }
 
     async function loop() {
@@ -50,10 +53,38 @@
     async function predict() {
         // predict can take in an image, video or canvas html element
         const prediction = await model.predict(webcam.canvas);
+        const highestChance = Math.max(prediction[0].probability.toFixed(2), prediction[1].probability.toFixed(2), prediction[2].probability.toFixed(2), prediction[3].probability.toFixed(2))
+        // console.log(highestChance)
+
+
+
+
         for (let i = 0; i < maxPredictions; i++) {
-            const classPrediction =
-                prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-            labelContainer.childNodes[i].innerHTML = classPrediction;
+
+            // const classPrediction =
+            //     prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+            // labelContainer.childNodes[i].innerHTML = classPrediction;
+
+            if (highestChance == prediction[i].probability.toFixed(2)) {
+                labelContainer.childNodes[0].innerHTML = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                msg.text = prediction[i].className
+                if (index == 50) {
+                    window.speechSynthesis.speak(msg)
+                    index = 0;
+                }
+                index++
+            }
         }
+
     }
+    let msg = new SpeechSynthesisUtterance();
+    let voices = window.speechSynthesis.getVoices();
+    msg.voices = voices[10];
+    msg.voiceURI = 'native';
+    msg.volume = 1;
+    msg.rate = 1;
+    msg.pitch = 2;
+    let loopi = 1
+
+
 </script>
