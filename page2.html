@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script src="imageRec.js"></script>
+
+    <link rel="stylesheet" href="CSS/style1.css">
+    <title>Take a pic</title>
+</head>
+
+<body>
+
+    <!-- Zichtbaar page1 -->
+    <div class="container">
+        <h1 class="title">Klik op een object!</h1>
+    </div>
+
+    <div class="blueBalk"></div>
+
+    <div class="container">
+        <img src="assets/FoodOnTheTable.png" alt="The table">
+        <div class="pinkSquare" onclick="init()" alt="This is a ..." style="top:220px; right: 15px;"></div>
+        <div class="pinkSquare" onclick="init()" alt="This is a ..." style="top:180px; right: 20px;"></div>
+        <div class="pinkSquare" onclick="init()" alt="This is a ..." style="top:170px; right: 20px;"></div>
+        <div class="pinkSquare" onclick="init()" alt="This is a ..." style="top:190px; right: 20px;"></div>
+    </div>
+
+
+    <!-- Zichtbaar Page2 -->
+    <div id="webcam-container"></div>
+    <div id="label-container"></div>
+</body> 
+</html>
+
