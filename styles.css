@@ -1,0 +1,42 @@
+body {
+    background: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.powerpuffLogo {
+    padding-top: 3rem;
+    /* position: relative; */
+}
+
+.loadingbar {
+    position: absolute;
+    bottom: 0%;
+    padding-bottom: 20rem;
+}
+
+@media (min-width: 600px){
+    /* mobile first */
+
+    p {
+        font-size: 1.25rem;
+    }
+
+    body {
+        background: blue;
+    }
+}
+
+@media (min-width: 800px){
+    p{
+        font-size: 1.5rem;
+    }
+
+    body {
+        background: pink;
+    }
+}
