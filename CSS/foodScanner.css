@@ -16,6 +16,10 @@ h1, h2, h3 {
     border: 30px 23px;
     margin-top: 20px;
 }
+.blue-background {
+    background-color: #7BD7FF;
+
+}
 
 img {
     z-index: 1;
