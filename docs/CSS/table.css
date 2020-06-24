@@ -1,0 +1,60 @@
+body {
+    background: black;
+}
+
+h1, h2, h3 {
+    color: black;
+}
+/* .container {
+    position: relative;
+    text-align: center;
+    color: white;
+  } */
+
+a {
+    position: absolute;
+}
+img {
+    z-index: 1;
+    height: auto;
+    justify-content: flex-start;
+}
+.blue-background {
+    background-color: #7BD7FF;
+}
+
+
+/* .title {
+    color: white;
+    text-align: center;
+    font-size: 300%;
+} */
+
+.pinkSquare {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border: 7px solid #FF7B7B;
+    z-index: 0;
+    border-radius: 4px;
+}
+
+
+/* img {
+    padding-top: 3rem;
+    position: absolute;
+    z-index: -1;
+} */
+
+@media (min-width: 600px){
+    /* mobile first */
+    body {
+        background: black;
+    }
+}
+
+@media (min-width: 800px){
+    body {
+        background: black;
+    }
+}
