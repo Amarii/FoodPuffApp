@@ -16,7 +16,7 @@ body {
 .loadingbar {
     position: absolute;
     bottom: 0%;
-    padding-bottom: 20rem;
+    padding-bottom: 2rem;
 }
 
 .table {

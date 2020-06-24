@@ -2,27 +2,35 @@ body {
     background: black;
 }
 
-.container {
-    display: flex;
-    /* flex-direction: column; */
-    /* align-items: center; */
-
-    justify-content: center;
-    /* align-content: center; */
+h1, h2, h3 {
+    color: black;
 }
 
-.title {
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    background-color: #7BD7FF;
+    border: 30px 23px;
+    margin: 20px 0px 20px;
+}
+
+img {
+    z-index: 1;
+    max-width: 100%;
+    height: auto;
+    margin-right: 5rem;
+    padding-right: 10rem;
+    justify-content: flex-start;
+}
+
+
+/* .title {
     color: white;
     text-align: center;
     font-size: 300%;
-    padding-left: 2rem;
-}
-
-.blueBalk {
-    padding-top: 10px; /* Add top padding */
-    padding-bottom: 10px; /* Add bottom padding */
-    background-color: #7BD7FF;
-}
+} */
 
 .pinkSquare {
     position: relative;
@@ -30,7 +38,9 @@ body {
     width: 50px;
     border: 7px solid #FF7B7B;
     z-index: 0;
+    border-radius: 4px;
 }
+
 
 /* img {
     padding-top: 3rem;
@@ -40,21 +50,12 @@ body {
 
 @media (min-width: 600px){
     /* mobile first */
-
-    p {
-        font-size: 1.25rem;
-    }
-
     body {
         background: black;
     }
 }
 
 @media (min-width: 800px){
-    p{
-        font-size: 1.5rem;
-    }
-
     body {
         background: black;
     }
