@@ -20,7 +20,7 @@ body {
 }
 
 .resize{
-    width: 105px;
+    width: 106px;
     height: auto;
     z-index: 2;
     margin-top:-50px;
@@ -42,6 +42,8 @@ body {
 #myBar {
     width: 1%;
     height: 31px;
+    border-style: solid;
+    border-color: #8affff;
     background-color: #8affff;
 }
 
