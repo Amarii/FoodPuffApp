@@ -19,9 +19,33 @@ body {
     padding-bottom: 2rem;
 }
 
-.table {
-    /*  */
+.resize{
+    width: 105px;
+    height: auto;
+    z-index: 2;
+    margin-top:-50px;
+    margin-bottom: -50px;
+    margin-right: -3px;
 }
+
+#myProgress {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    width: 70%;
+    background-color: black;
+    border-style: solid;
+    border-color: white;
+    /* z-index: -1; */
+}
+
+#myBar {
+    width: 1%;
+    height: 31px;
+    background-color: #8affff;
+}
+
+
 
 @media (min-width: 600px){
     /* mobile first */

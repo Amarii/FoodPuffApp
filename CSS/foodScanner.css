@@ -42,19 +42,12 @@ img {
 @media (min-width: 600px){
     /* mobile first */
 
-    p {
-        font-size: 1.25rem;
-    }
-
     body {
         background: black;
     }
 }
 
 @media (min-width: 800px){
-    p{
-        font-size: 1.5rem;
-    }
 
     body {
         background: black;

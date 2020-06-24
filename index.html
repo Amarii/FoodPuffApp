@@ -6,6 +6,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <script>
+        window.addEventListener('load', (event) => {
+        move();
+    });
+    </script>
+
+
     <link rel="stylesheet" href="CSS/index.css">
     <title>Powerpuff Girls</title>
 </head>
@@ -14,10 +24,41 @@
     <div class="container">
         <img class="powerpuffLogo" src="assets/Group 12.png" alt="The PowerPuffGirls">
 
-        <a href="menu.html" class="loadingbar">
+        <!-- <a href="menu.html" class="loadingbar">
             <img src="assets/ChargeBalk2.png" alt="LoadingBar">
-        </a>
+        </a> -->
+
+        <br><br>
+        <div id="myProgress">
+            <div id="myBar"></div>
+            <img class="resize" src="assets/head.png" alt="LoadingBar">
+        </div>
+
     </div>
+
+    <!-- Code of progressbar -->
+    <script>
+        var i = 0;
+        function move() {
+          if (i == 0) {
+            i = 1;
+            var elem = document.getElementById("myBar");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() {
+              if (width >= 95) {
+                clearInterval(id);
+                i = 0;
+                location.href = 'menu.html'
+              } else {
+                //width++;
+                width = width + 0.7
+                elem.style.width = width + "%";
+              }
+            }
+          }
+        }
+    </script>
 
 </body>
 </html>   
