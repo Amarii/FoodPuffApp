@@ -45,17 +45,17 @@ async function predict() {
     const prediction = await model.predict(webcam.canvas);
     const highestChance = Math.max(prediction[0].probability.toFixed(2), prediction[1].probability.toFixed(2), prediction[2].probability.toFixed(2), prediction[3].probability.toFixed(2))
 
-    for (let i = 0; i < maxPredictions; i++) {
-        if (highestChance == prediction[i].probability.toFixed(2)) {
-            labelContainer.childNodes[0].innerHTML = prediction[i].className + "!"
-            msg.text = prediction[i].className
-            // if (index == 50) {
-            //     //window.speechSynthesis.speak(msg)
-            //     index = 0;
-            // }
-            //index++
-        }
-    }
+    // for (let i = 0; i < maxPredictions; i++) {
+    //     if (highestChance == prediction[i].probability.toFixed(2)) {
+    //         labelContainer.childNodes[0].innerHTML = prediction[i].className + "!"
+    //         msg.text = prediction[i].className
+    //         // if (index == 50) {
+    //         //     //window.speechSynthesis.speak(msg)
+    //         //     index = 0;
+    //         // }
+    //         //index++
+    //     }
+    // }
 
 }
 

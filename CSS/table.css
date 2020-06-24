@@ -3,25 +3,20 @@ body {
 }
 
 h1, h2, h3 {
-    color: black;
+    color: white;
 }
+/* .container {
+    position: relative;
+    text-align: center;
+    color: white;
+  } */
 
-.container {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    background-color: #7BD7FF;
-    border: 30px 23px;
-    margin: 20px 0px 20px;
+a {
+    position: absolute;
 }
-
 img {
     z-index: 1;
-    max-width: 100%;
     height: auto;
-    margin-right: 5rem;
-    padding-right: 10rem;
     justify-content: flex-start;
 }
 
@@ -33,7 +28,7 @@ img {
 } */
 
 .pinkSquare {
-    position: relative;
+    position: absolute;
     height: 50px;
     width: 50px;
     border: 7px solid #FF7B7B;
