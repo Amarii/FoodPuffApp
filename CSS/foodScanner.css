@@ -18,7 +18,7 @@ h1, h2, h3 {
 }
 .blue-background {
     background-color: #7BD7FF;
-
+    max-height: 75px;
 }
 
 img {
