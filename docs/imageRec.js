@@ -47,8 +47,8 @@ async function predict() {
 
     for (let i = 0; i < maxPredictions; i++) {
         if (highestChance == prediction[i].probability.toFixed(2)) {
-            labelContainer.childNodes[0].innerHTML = prediction[i].className + "!"
-            labelContainer.childNodes[0].alt = prediction[i].className
+            labelContainer.childNodes[2].innerHTML = prediction[i].className + "!"
+            labelContainer.childNodes[2].alt = prediction[i].className
             msg.text = prediction[i].className
 
             // if (index == 50) {
