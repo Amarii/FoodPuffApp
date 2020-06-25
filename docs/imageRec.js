@@ -47,12 +47,9 @@ async function predict() {
 
     for (let i = 0; i < maxPredictions; i++) {
         if (highestChance == prediction[i].probability.toFixed(2)) {
-            labelContainer.childNodes[0].style.width = "500px"
-            labelContainer.childNodes[0].style.height = "300px"
             labelContainer.childNodes[0].innerHTML = prediction[i].className + "!"
             labelContainer.childNodes[0].alt = prediction[i].className
             msg.text = prediction[i].className
-
 
             // if (index == 50) {
             //     //window.speechSynthesis.speak(msg)
