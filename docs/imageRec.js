@@ -50,7 +50,7 @@ async function predict() {
             labelContainer.childNodes[0].innerHTML = prediction[i].className + "!"
             labelContainer.childNodes[0].alt = prediction[i].className
             msg.text = prediction[i].className
-            labelContainer.childNodes[0].width = "100px"
+            labelContainer.childNodes[0].style.width = "100px"
 
             // if (index == 50) {
             //     //window.speechSynthesis.speak(msg)
