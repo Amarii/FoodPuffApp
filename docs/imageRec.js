@@ -27,7 +27,7 @@ async function init() {
     document.getElementById("webcam-container").appendChild(webcam.canvas);
     labelContainer = document.getElementById("label-container");
     for (let i = 0; i < maxPredictions; i++) { // and class labels
-        labelContainer.appendChild(document.createElement("img"));
+        labelContainer.appendChild(document.createElement("div"));
     }
     let index;
 }
@@ -48,9 +48,7 @@ async function predict() {
     for (let i = 0; i < maxPredictions; i++) {
         if (highestChance == prediction[i].probability.toFixed(2)) {
             labelContainer.childNodes[0].innerHTML = prediction[i].className + "!"
-            labelContainer.childNodes[0].alt = prediction[i].className
             msg.text = prediction[i].className
-
             // if (index == 50) {
             //     //window.speechSynthesis.speak(msg)
             //     index = 0;
