@@ -39,6 +39,8 @@ img {
     background-color: #85C966;
     margin: 50px;
     padding: 20px;
+    margin-right: 140px;
+    margin-left: 140px;
 }
 
 @media (min-width: 600px){
